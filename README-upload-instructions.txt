@@ -81,3 +81,9 @@ First month’s rent and security deposit due at signing
 No pets
 No smoking
 Undergraduate students are not permitted per building policy
+
+
+YOUTUBE WALKTHROUGH UPDATE
+The site is already updated to embed this YouTube walkthrough video:
+https://youtu.be/1xtYra_62C8
+If you upload a replacement video later, edit index.html and photos.html and replace the iframe src value with the new YouTube embed URL. For example, a YouTube link like https://youtu.be/VIDEOID becomes https://www.youtube.com/embed/VIDEOID
