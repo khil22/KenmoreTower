@@ -1,28 +1,28 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const menuBtn = document.querySelector('.menu-button');
-  const navLinks = document.querySelector('.nav-links');
+document.addEventListener('DOMContentLoaded', function () {
+  var menuBtn = document.querySelector('.menu-button');
+  var navLinks = document.querySelector('.nav-links');
   if (menuBtn && navLinks) {
-    menuBtn.addEventListener('click', () => navLinks.classList.toggle('open'));
+    menuBtn.addEventListener('click', function () {
+      var open = navLinks.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open);
+    });
   }
 
-  const path = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    const href = link.getAttribute('href');
-    if (href === path || (path === '' && href === 'index.html')) link.classList.add('active');
-  });
-
-  const lightbox = document.querySelector('.lightbox');
-  const lightboxImg = document.querySelector('.lightbox img');
+  var lightbox = document.querySelector('.lightbox');
+  var lightboxImg = lightbox ? lightbox.querySelector('img') : null;
   if (lightbox && lightboxImg) {
-    document.querySelectorAll('[data-lightbox]').forEach(item => {
-      item.addEventListener('click', e => {
+    document.querySelectorAll('[data-lightbox]').forEach(function (item) {
+      item.addEventListener('click', function (e) {
         e.preventDefault();
         lightboxImg.src = item.getAttribute('href');
         lightbox.classList.add('open');
       });
     });
-    lightbox.addEventListener('click', e => {
+    lightbox.addEventListener('click', function (e) {
       if (e.target === lightbox || e.target.tagName === 'BUTTON') lightbox.classList.remove('open');
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') lightbox.classList.remove('open');
     });
   }
 });
