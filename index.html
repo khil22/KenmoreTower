@@ -4,73 +4,309 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>566 Commonwealth Ave #606 | Boston Apartment for Rent</title>
-  <meta name="description" content="Professional 2 bed, 2 bath apartment rental at 566 Commonwealth Ave #606 in Boston's Kenmore/Fenway neighborhood. Available September 1, 2026.">
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="A refined 2 bed, 2 bath residence for lease at 566 Commonwealth Ave #606 in Boston's Kenmore/Fenway neighborhood. Available October 1, 2026.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ink:#17140F;
+      --paper:#F6F3ED;
+      --paper-2:#EFEBE1;
+      --pine:#1F2E27;
+      --pine-2:#2A3B33;
+      --brass:#A98352;
+      --brass-deep:#8A6A3E;
+      --line:#E1DBCF;
+      --line-dark:rgba(246,243,237,.16);
+      --muted:#6B6459;
+      --paper-muted:rgba(246,243,237,.74);
+      --display:'Fraunces',Georgia,'Times New Roman',serif;
+      --body:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+      --wrap:1180px;
+      --pad:clamp(1.25rem,4vw,2.5rem);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;background:var(--paper);color:var(--ink);
+      font-family:var(--body);font-size:clamp(1rem,.55vw + .9rem,1.075rem);
+      line-height:1.65;-webkit-font-smoothing:antialiased;letter-spacing:.002em;
+    }
+    img{max-width:100%;display:block}
+    a{color:inherit}
+    .container{max-width:var(--wrap);margin:0 auto;padding-inline:var(--pad)}
+
+    .eyebrow{
+      font-size:.72rem;font-weight:600;text-transform:uppercase;
+      letter-spacing:.2em;color:var(--brass-deep);margin:0 0 1.1rem;
+    }
+    h1,h2,h3{font-family:var(--display);font-weight:300;line-height:1.08;letter-spacing:-.01em;margin:0}
+    h2.section-title{font-size:clamp(1.9rem,3.4vw,2.9rem);font-weight:400;margin:.2rem 0 1.2rem}
+    h3{font-weight:400}
+    p{margin:0 0 1rem}
+    .lead{font-size:clamp(1.05rem,.6vw + .95rem,1.2rem);color:var(--muted)}
+
+    /* ---- top utility bar ---- */
+    .topbar{background:var(--ink);color:var(--paper-muted);font-size:.8rem;letter-spacing:.02em}
+    .topbar .container{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding-block:.6rem}
+    .topbar a{color:var(--paper);text-decoration:none}
+    .topbar a:hover{color:var(--brass)}
+
+    /* ---- header / nav ---- */
+    .site-header{position:sticky;top:0;z-index:50;background:rgba(246,243,237,.88);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--line)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:1.05rem}
+    .brand{display:flex;flex-direction:column;text-decoration:none;line-height:1.25}
+    .brand span:first-child{font-family:var(--display);font-size:1.15rem}
+    .brand span:last-child{font-size:.7rem;text-transform:uppercase;letter-spacing:.18em;color:var(--muted)}
+    .nav-links{display:flex;gap:2rem;align-items:center}
+    .nav-links a{text-decoration:none;font-size:.86rem;letter-spacing:.03em;color:var(--ink);padding-bottom:2px;border-bottom:1px solid transparent;transition:border-color .2s,color .2s}
+    .nav-links a:hover{border-color:var(--brass);color:var(--brass-deep)}
+    .menu-button{display:none;background:none;border:1px solid var(--line);border-radius:2px;padding:.5rem .85rem;font-family:var(--body);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;color:var(--ink)}
+
+    /* ---- buttons ---- */
+    .button{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;font-size:.82rem;letter-spacing:.09em;text-transform:uppercase;font-weight:500;padding:.9rem 1.6rem;border-radius:2px;border:1px solid transparent;transition:transform .2s,background .2s,color .2s,border-color .2s}
+    .button:hover{transform:translateY(-1px)}
+    .button.primary{background:var(--brass);color:#fff;border-color:var(--brass)}
+    .button.primary:hover{background:var(--brass-deep);border-color:var(--brass-deep)}
+    .button.secondary{background:transparent;color:var(--paper);border-color:var(--line-dark)}
+    .button.secondary:hover{border-color:var(--paper);background:rgba(246,243,237,.08)}
+    .button.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+    .button.ghost:hover{border-color:var(--brass);color:var(--brass-deep)}
+
+    /* ---- hero (calm, dark pine field — no busy background photo) ---- */
+    .hero{background:var(--pine);color:var(--paper)}
+    .hero .container{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,4.5rem);align-items:center;padding-block:clamp(3.5rem,7vw,6rem)}
+    .hero .eyebrow{color:var(--brass)}
+    .hero h1{font-size:clamp(2.5rem,5.4vw,4.4rem);color:var(--paper)}
+    .hero p{color:var(--paper-muted);max-width:44ch;margin-top:1.5rem}
+    .hero-actions{display:flex;gap:.85rem;flex-wrap:wrap;margin-top:2rem}
+    .hero-figure{position:relative}
+    .hero-figure img{width:100%;height:clamp(320px,42vw,520px);object-fit:cover;border-radius:3px;border:1px solid var(--line-dark)}
+    .hero-figure figcaption{position:absolute;left:1rem;bottom:1rem;background:rgba(23,20,15,.62);color:var(--paper);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;padding:.45rem .8rem;border-radius:2px}
+
+    /* ---- stat row (hairline separated, restrained) ---- */
+    .stats{border-top:1px solid var(--line-dark);border-bottom:1px solid var(--line-dark)}
+    .stats .container{display:grid;grid-template-columns:repeat(4,1fr);padding:0}
+    .stat{padding:1.6rem var(--pad);text-align:left;border-left:1px solid var(--line-dark)}
+    .stat:first-child{border-left:none}
+    .stat strong{display:block;font-family:var(--display);font-weight:300;font-size:1.85rem;color:var(--paper);line-height:1}
+    .stat span{display:block;margin-top:.4rem;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--paper-muted)}
+
+    /* ---- price band ---- */
+    .price{background:var(--paper)}
+    .price .container{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(1.5rem,4vw,3.5rem);align-items:end;padding-block:clamp(2.5rem,5vw,3.75rem);border-bottom:1px solid var(--line)}
+    .price-main{font-family:var(--display);font-weight:300;font-size:clamp(2.4rem,4vw,3.4rem);line-height:1;margin:.3rem 0 .8rem}
+    .price-main small{font-size:1.05rem;color:var(--muted);letter-spacing:.02em}
+    .price p{color:var(--muted);margin:0}
+    .price .aside strong{display:block;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--brass-deep);margin-bottom:.5rem}
+
+    /* ---- generic section ---- */
+    .section{padding-block:clamp(4rem,8vw,7rem)}
+    .section.tint{background:var(--paper-2)}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
+    .split.reverse .col-text{order:2}
+
+    .rule-list{display:grid;gap:0;margin-top:1.5rem}
+    .rule-list div{display:grid;grid-template-columns:auto 1fr;gap:1rem;align-items:start;padding:1.1rem 0;border-top:1px solid var(--line)}
+    .rule-list div:last-child{border-bottom:1px solid var(--line)}
+    .rule-list .mk{font-family:var(--display);font-size:.95rem;color:var(--brass-deep);line-height:1.6}
+
+    .image-stack{display:grid;gap:1rem}
+    .image-stack img{width:100%;height:clamp(180px,24vw,300px);object-fit:cover;border-radius:3px;border:1px solid var(--line)}
+
+    /* ---- features (quiet, hairline cards) ---- */
+    .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:2.5rem;border-top:1px solid var(--line)}
+    .feature-card{padding:2rem clamp(1rem,2vw,2rem);border-left:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .feature-card:first-child{border-left:none}
+    .feature-card h3{font-size:1.35rem;margin-bottom:.6rem}
+    .feature-card p{color:var(--muted);margin:0;font-size:.98rem}
+    .feature-index{font-family:var(--display);font-size:.85rem;color:var(--brass);letter-spacing:.05em;margin-bottom:1rem}
+
+    /* ---- video ---- */
+    .video-embed{position:relative;aspect-ratio:16/9;border-radius:3px;overflow:hidden;border:1px solid var(--line)}
+    .video-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+    /* ---- footer ---- */
+    .footer{background:var(--pine);color:var(--paper-muted)}
+    .footer .container{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap;padding-block:clamp(2.5rem,5vw,3.5rem)}
+    .footer strong{color:var(--paper);font-family:var(--display);font-weight:400;font-size:1.1rem}
+    .footer a{color:var(--paper);text-decoration:none}
+    .footer a:hover{color:var(--brass)}
+    .footer p{margin:.35rem 0;font-size:.9rem}
+
+    /* ---- entrance motion ---- */
+    .rise{opacity:0;transform:translateY(14px);animation:rise .8s cubic-bezier(.2,.7,.2,1) forwards}
+    .rise.d1{animation-delay:.08s}.rise.d2{animation-delay:.16s}.rise.d3{animation-delay:.24s}
+    @keyframes rise{to{opacity:1;transform:none}}
+
+    /* ---- responsive ---- */
+    @media(max-width:860px){
+      .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--paper);border-bottom:1px solid var(--line)}
+      .nav-links.open{display:flex}
+      .nav-links a{padding:1rem var(--pad);border-bottom:1px solid var(--line);border-radius:0}
+      .menu-button{display:inline-block}
+      .hero .container{grid-template-columns:1fr}
+      .hero-figure{order:-1}
+      .stats .container{grid-template-columns:repeat(2,1fr)}
+      .stat:nth-child(3){border-left:none}
+      .stat:nth-child(3),.stat:nth-child(4){border-top:1px solid var(--line-dark)}
+      .price .container,.split{grid-template-columns:1fr}
+      .split.reverse .col-text{order:0}
+      .feature-grid{grid-template-columns:1fr}
+      .feature-card{border-left:none}
+      .feature-card:first-child{border-top:none}
+    }
+    @media(prefers-reduced-motion:reduce){
+      .rise{animation:none;opacity:1;transform:none}
+      html{scroll-behavior:auto}
+      .button:hover{transform:none}
+    }
+  </style>
 </head>
 <body>
-  <div class="topbar"><div class="container"><span>Available September 1, 2026 · 2 Bed · 2 Bath · 1,245 Sq. Ft.</span><span><a href="tel:+16178385853">617-838-5853</a> · <a href="mailto:khil22@yahoo.com">khil22@yahoo.com</a></span></div></div>
-  <header class="site-header"><nav class="nav container"><a class="brand" href="index.html"><span>566 Commonwealth Ave #606</span><span>Kenmore / Fenway · Boston</span></a><button class="menu-button">Menu</button><div class="nav-links"><a href="index.html">Home</a><a href="photos.html">Photos & Video</a><a href="amenities.html">Amenities</a><a href="location.html">Location</a><a href="lease.html">Lease Terms</a><a href="contact.html">Contact</a></div></nav></header>
+  <div class="topbar"><div class="container"><span>For lease · Available October 1, 2026 · 2 Bed / 2 Bath / 1,245 Sq. Ft.</span><span><a href="tel:+16178385853">617-838-5853</a> · <a href="mailto:khil22@yahoo.com">khil22@yahoo.com</a></span></div></div>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="index.html"><span>566 Commonwealth Ave #606</span><span>Kenmore / Fenway · Boston</span></a>
+      <button class="menu-button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="photos.html">Photos &amp; Video</a>
+        <a href="amenities.html">Amenities</a>
+        <a href="location.html">Location</a>
+        <a href="lease.html">Lease Terms</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
 
   <main>
     <section class="hero">
-      <div class="container hero-content">
-        <div class="eyebrow">Luxury Boston rental · No broker fee</div>
-        <h1>Elevated Kenmore living facing Fenway Park.</h1>
-        <p>A bright and spacious 2-bedroom, 2-bath residence on the 6th floor of a professionally managed elevator building at 566 Commonwealth Avenue.</p>
-        <div class="hero-actions"><a class="button primary" href="contact.html">Schedule a Showing</a><a class="button secondary" href="photos.html">View Photos</a><a class="button gold" href="https://www.zillow.com/homedetails/566-Commonwealth-Ave-606-Boston-MA-02215/2077763507_zpid/?view=public" target="_blank" rel="noopener">View on Zillow</a></div>
-        <div class="stats"><div class="stat"><strong>2</strong><span>Bedrooms</span></div><div class="stat"><strong>2</strong><span>Bathrooms</span></div><div class="stat"><strong>1,245</strong><span>Approx. square feet</span></div><div class="stat"><strong>6th</strong><span>Floor residence</span></div></div>
-      </div>
-    </section>
-
-    <div class="container price-card">
-      <div><div class="eyebrow">Pricing</div><div class="price-main">$4,500 / month</div><p>Heat and hot water included. Tenant responsible for electricity and internet/cable.</p></div>
-      <div><strong>Optional garage parking</strong><p>One attached garage parking space available for an additional <strong>$300/month</strong>.</p></div>
-    </div>
-
-    <section class="section">
-      <div class="container split">
-        <div>
-          <div class="eyebrow">Residence overview</div>
-          <h2 class="section-title">Bright, secure, and professionally positioned.</h2>
-          <p class="lead">This well-maintained home is designed for professionals who want space, convenience, and a highly connected Boston location. Large windows bring in abundant natural light, with views facing Fenway Park, while hardwood floors and central air provide year-round comfort.</p>
-          <div class="highlight-list">
-            <div><span class="check">✓</span><span>Professionally managed elevator building with 24/7 security.</span></div>
-            <div><span class="check">✓</span><span>Ideal for doctors, dentists, medical professionals, researchers, fellows, residents, and other working professionals.</span></div>
-            <div><span class="check">✓</span><span>Walk to Kenmore T, Longwood Medical Area, Boston University, Fenway Park, Newbury Street, and the Charles River.</span></div>
+      <div class="container">
+        <div class="col-text">
+          <p class="eyebrow rise">For lease · No broker fee</p>
+          <h1 class="rise d1">A refined two-bedroom residence in Kenmore.</h1>
+          <p class="rise d2">A bright, spacious home on the sixth floor of a professionally managed elevator building at 566 Commonwealth Avenue — with views facing Fenway Park.</p>
+          <div class="hero-actions rise d3">
+            <a class="button primary" href="contact.html">Schedule a Showing</a>
+            <a class="button secondary" href="photos.html">View Photos</a>
           </div>
         </div>
-        <div class="image-stack"><img src="images/living-room-1.webp" alt="Bright living room with hardwood floors and natural light"><img src="images/kitchen.webp" alt="Apartment kitchen"></div>
+        <figure class="hero-figure rise d2">
+          <img src="images/living-room-1.webp" alt="Bright living room with hardwood floors and natural light">
+          <figcaption>The residence · 6th floor</figcaption>
+        </figure>
       </div>
     </section>
 
-    <section class="section compact" style="background:var(--cream)">
+    <section class="stats">
       <div class="container">
-        <div class="eyebrow">Featured highlights</div>
-        <h2 class="section-title">Comfort and convenience in one of Boston’s best-connected neighborhoods.</h2>
-        <div class="feature-grid">
-          <div class="feature-card"><h3>Spacious layout</h3><p>2 bedrooms, 2 bathrooms, and approximately 1,245 sq. ft. of living space.</p></div>
-          <div class="feature-card"><h3>Fenway-facing views</h3><p>Large windows and abundant natural light with views facing Fenway Park.</p></div>
-          <div class="feature-card"><h3>Building amenities</h3><p>24/7 security, elevator access, building laundry, seasonal outdoor pool, and optional garage parking.</p></div>
+        <div class="stat"><strong>2</strong><span>Bedrooms</span></div>
+        <div class="stat"><strong>2</strong><span>Bathrooms</span></div>
+        <div class="stat"><strong>1,245</strong><span>Approx. sq. ft.</span></div>
+        <div class="stat"><strong>6th</strong><span>Floor residence</span></div>
+      </div>
+    </section>
+
+    <section class="price">
+      <div class="container">
+        <div>
+          <p class="eyebrow">Pricing</p>
+          <div class="price-main">$4,300 <small>/ month</small></div>
+          <p>Heat and hot water included. Tenant responsible for electricity and internet/cable.</p>
+        </div>
+        <div class="aside">
+          <strong>Optional garage parking</strong>
+          <p>One attached garage parking space available for an additional <strong>$300 / month</strong>.</p>
         </div>
       </div>
     </section>
 
     <section class="section">
       <div class="container split">
+        <div class="col-text">
+          <p class="eyebrow">Residence overview</p>
+          <h2 class="section-title">Bright, secure, and professionally positioned.</h2>
+          <p class="lead">A well-maintained home designed for professionals who want space, quiet, and a highly connected Boston location. Large windows bring in abundant natural light; hardwood floors and central air provide year-round comfort.</p>
+          <div class="rule-list">
+            <div><span class="mk">01</span><span>Professionally managed elevator building with 24/7 security.</span></div>
+            <div><span class="mk">02</span><span>Well suited to physicians, researchers, fellows, residents, and other working professionals.</span></div>
+            <div><span class="mk">03</span><span>Walk to Kenmore T, Longwood Medical Area, Boston University, Fenway Park, Newbury Street, and the Charles River.</span></div>
+          </div>
+        </div>
+        <div class="image-stack">
+          <img src="images/living-room-1.webp" alt="Living room with hardwood floors">
+          <img src="images/kitchen.webp" alt="Apartment kitchen">
+        </div>
+      </div>
+    </section>
+
+    <section class="section tint">
+      <div class="container">
+        <p class="eyebrow">Featured highlights</p>
+        <h2 class="section-title">Comfort and convenience in one of Boston's best-connected neighborhoods.</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-index">01</div>
+            <h3>Spacious layout</h3>
+            <p>Two bedrooms, two bathrooms, and approximately 1,245 sq. ft. of living space.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-index">02</div>
+            <h3>Fenway-facing views</h3>
+            <p>Large windows and abundant natural light with views facing Fenway Park.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-index">03</div>
+            <h3>Building amenities</h3>
+            <p>24/7 security, elevator access, building laundry, seasonal outdoor pool, and optional garage parking.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split reverse">
+        <div class="col-text">
+          <p class="eyebrow">Tour the residence</p>
+          <h2 class="section-title">Watch the walkthrough.</h2>
+          <p class="lead">View the apartment walkthrough, then explore the full gallery for the residence, Fenway-facing views, building amenities, pool, and optional garage parking.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="photos.html">Open Gallery</a>
+            <a class="button ghost" href="https://youtu.be/1xtYra_62C8" target="_blank" rel="noopener">Open on YouTube</a>
+          </div>
+        </div>
         <div class="video-embed">
           <iframe src="https://www.youtube.com/embed/1xtYra_62C8" title="566 Commonwealth Ave #606 walkthrough video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-        <div>
-          <div class="eyebrow">Tour the residence</div>
-          <h2 class="section-title">Watch the walkthrough.</h2>
-          <p class="lead">View the apartment walkthrough video, then explore the full photo gallery for the residence, Fenway-facing views, building amenities, pool, and optional garage parking.</p>
-          <div class="hero-actions"><a class="button primary" href="photos.html">Open Gallery</a><a class="button secondary" href="https://youtu.be/1xtYra_62C8" target="_blank" rel="noopener">Open on YouTube</a></div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer"><div class="container"><div><strong>566 Commonwealth Ave #606</strong><p>Boston, MA 02215 · Kenmore/Fenway</p></div><div><p>Contact Nick</p><p><a href="mailto:khil22@yahoo.com">khil22@yahoo.com</a> · <a href="tel:+16178385853">617-838-5853</a></p></div></div></footer>
-  <script src="script.js"></script>
+  <footer class="footer">
+    <div class="container">
+      <div>
+        <strong>566 Commonwealth Ave #606</strong>
+        <p>Boston, MA 02215 · Kenmore / Fenway</p>
+        <p>Available October 1, 2026 · No broker fee</p>
+      </div>
+      <div>
+        <p>Contact Nick</p>
+        <p><a href="mailto:khil22@yahoo.com">khil22@yahoo.com</a></p>
+        <p><a href="tel:+16178385853">617-838-5853</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.querySelector('.menu-button');
+    const links = document.getElementById('nav-links');
+    btn.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+    });
+  </script>
 </body>
 </html>
